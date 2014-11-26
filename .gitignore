@@ -18,3 +18,9 @@
 /tmp
 
 .idea/workspace.xml
+
+.idea/.generators
+
+.idea/.rakeTasks
+
+.idea/learnatizer.iml
