@@ -42,12 +42,12 @@ ruby '2.0.0'
 
 gem 'pry-rails'
 gem 'carrierwave' # For uploading files from the user
-gem 'dotenv-rails'
-gem 'faker', group: :test
+gem 'dotenv-rails' # For managing ENV variables
+gem 'faker', group: :test # For making test data
 gem 'mini_magick' # For picture resizing
-gem 'fog' # For setting up part of the Amazon S3
+gem 'fog' # For setting up part of Amazon S3
 gem 'bcrypt', '~> 3.1.9' # For password security
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', github: 'activeadmin' # For an awesome admin console
 
 
 # User the 'thin' server instead of the default webrick
@@ -67,7 +67,7 @@ group :development do
   gem 'debugger'
   gem 'pry-debugger'
   gem 'better_errors'
-  gem 'binding_of_caller'
+  gem 'binding_of_caller' # Part of the debugging gems
   gem 'letter_opener' #Allows viewing email in browser for testing ease
-  gem 'did_you_mean'
+  gem 'did_you_mean' # Part of the debugging gems
 end
