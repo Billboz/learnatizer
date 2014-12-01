@@ -1,8 +1,9 @@
 <h1>Welcome</h1>
 
 
+
 <div class="container">
-  <%= form_tag root_path, class: 'form-signup', role: 'form' do %>
+  <%= form_tag signup_path, class: 'form-signup', role: 'form' do %>
 
       <h2>Please Sign Up</h2>
       <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Name', :required => true, :autofocus => true %>
