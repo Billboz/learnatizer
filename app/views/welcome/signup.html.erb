@@ -1,21 +1,3 @@
-
-<div class="container">
-  <%= form_tag signup_path, class: 'form-signup', role: 'form' do %>
-
-      <h2>Please Sign Up</h2>
-      <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Name', :required => true, :autofocus => true %>
-      <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Email Address', :required => true %>
-      <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password', :required => true %>
-      <%= password_field_tag 'password_confirmation', nil, class: 'form-control', placeholder: 'Confirm Password', :required => true %>
-      <div class="checkbox">
-        <label for="remember">
-          <input name="remember" type="checkbox" id="remember" value="1"> Remember me
-        </label>
-      </div>
-      <%= submit_tag 'Sign Up', class: 'btn btn-lg btn-primary btn-block' %>
-  <% end %>
-</div>
-
 <!-- Button trigger modal -->
 
 
@@ -27,7 +9,7 @@
       <div class="bs-example bs-example-tabs">
         <ul id="myTab" class="nav nav-tabs">
           <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
-          <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+          <li class=""><a href="#signup" data-toggle="tab">Sign Up</a></li>
           <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
         </ul>
       </div>
@@ -43,9 +25,13 @@
                 <!-- Sign In Form -->
                 <!-- Text input-->
                 <div class="control-group">
-                  <label class="control-label" for="userid">Alias:</label>
+                  <%= form_tag signin_path, class: 'form-inline' do %>
+
+                <label class="control-label" for="userid">Alias:</label>
                   <div class="controls">
                     <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="JoeSixpack" class="input-medium" required="">
+                    <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Enter your email', :require => true, :autofocus => true %>
+
                   </div>
                 </div>
 
@@ -54,6 +40,8 @@
                   <label class="control-label" for="passwordinput">Password:</label>
                   <div class="controls">
                     <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                    <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password', :require => true %>
+
                   </div>
                 </div>
 
@@ -63,6 +51,8 @@
                   <div class="controls">
                     <label class="checkbox inline" for="rememberme-0">
                       <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                      <%= check_box_tag 'checkbox', 'yes', false %>Remember me
+
                       Remember me
                     </label>
                   </div>
@@ -73,6 +63,9 @@
                   <label class="control-label" for="signin"></label>
                   <div class="controls">
                     <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                    <%= submit_tag 'Sign in', class: 'btn btn-sm' %>
+                  <% end %>
+
                   </div>
                 </div>
               </fieldset>
@@ -84,9 +77,13 @@
                 <!-- Sign Up Form -->
                 <!-- Text input-->
                 <div class="control-group">
-                  <label class="control-label" for="Email">Email:</label>
+                  <%= form_tag signup_path, class: 'form-signup', role: 'form' do %>
+
+                <label class="control-label" for="Email">Email:</label>
                   <div class="controls">
                     <input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">
+                    <%= text_field_tag 'email', nil, class: 'form-control', placeholder: 'Email Address', :required => true %>
+
                   </div>
                 </div>
 
@@ -95,6 +92,8 @@
                   <label class="control-label" for="userid">Alias:</label>
                   <div class="controls">
                     <input id="userid" name="userid" class="form-control" type="text" placeholder="JoeSixpack" class="input-large" required="">
+                    <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Name', :required => true, :autofocus => true %>
+
                   </div>
                 </div>
 
@@ -103,6 +102,8 @@
                   <label class="control-label" for="password">Password:</label>
                   <div class="controls">
                     <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                    <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password', :required => true %>
+
                     <em>1-8 Characters</em>
                   </div>
                 </div>
@@ -112,26 +113,30 @@
                   <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
                   <div class="controls">
                     <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                    <%= password_field_tag 'password_confirmation', nil, class: 'form-control', placeholder: 'Confirm Password', :required => true %>
+
                   </div>
                 </div>
 
                 <!-- Multiple Radios (inline) -->
                 <br>
-                <div class="control-group">
-                  <label class="control-label" for="humancheck">Humanity Check:</label>
-                  <div class="controls">
-                    <label class="radio inline" for="humancheck-0">
-                      <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>
-                    <label class="radio inline" for="humancheck-1">
-                      <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
-                  </div>
-                </div>
+                <!--<div class="control-group">-->
+                  <!--<label class="control-label" for="humancheck">Humanity Check:</label>-->
+                  <!--<div class="controls">-->
+                    <!--<label class="radio inline" for="humancheck-0">-->
+                      <!--<input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked">I'm a Robot</label>-->
+                    <!--<label class="radio inline" for="humancheck-1">-->
+                      <!--<input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>-->
+                  <!--</div>-->
+                <!--</div>-->
 
                 <!-- Button -->
                 <div class="control-group">
                   <label class="control-label" for="confirmsignup"></label>
                   <div class="controls">
                     <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                    <%= submit_tag 'Sign Up', class: 'btn btn-lg btn-primary btn-block' %>
+
                   </div>
                 </div>
               </fieldset>
@@ -139,6 +144,7 @@
           </div>
         </div>
       </div>
+  <% end %>
       <div class="modal-footer">
         <center>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
