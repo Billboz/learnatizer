@@ -1,0 +1,118 @@
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <br>
+      <div class="bs-example bs-example-tabs">
+        <ul id="myTab" class="nav nav-tabs">
+          <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+          <li class=""><a href="#signup" data-toggle="tab">Sign Up</a></li>
+          <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+        </ul>
+      </div>
+      <div class="modal-body">
+        <div id="myTabContent" class="tab-content">
+          <div class="tab-pane fade in" id="why">
+            <p>We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p>
+            <p></p><br> Please contact <a mailto:href="JoeSixPack@Sixpacksrus.com"></a>JoeSixPack@Sixpacksrus.com</a> for any other inquiries.</p>
+          </div>
+          <div class="tab-pane fade active in" id="signin">
+            <!--<form class="form-horizontal">-->
+            <fieldset>
+              <!-- Sign In Form -->
+              <!-- Text input-->
+              <div class="control-group">
+                <%= form_tag signin_path, class: 'form-inline' do %>
+                    <br>
+                    <div class="controls">
+                      <%= text_field_tag 'email', nil, class: 'form-control', type: 'text', placeholder: 'Enter your email', class: 'input-large', :require => true, :autofocus => true %>
+                    </div>
+                    </div>
+                    <!-- Password input-->
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password', class: 'input-large', :require => true %>
+                      </div>
+                    </div>
+                    <!-- Multiple Checkboxes (inline) -->
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= check_box_tag 'checkbox', 'yes', false %>Remember me
+                        <!--Remember me-->
+                        </label>
+                      </div>
+                      <br>
+                    </div>
+                    <!-- Button -->
+                    <div class="control-group">
+                      <div class="controls">
+                        <%= submit_tag 'Sign in', class: 'btn btn-success' %>
+                <% end %>
+                </div>
+                </div>
+                </fieldset>
+            <!--</form>-->
+          </div>
+          <div class="tab-pane fade" id="signup">
+            <!--<form class="form-horizontal">-->
+            <fieldset>
+              <!-- Sign Up Form -->
+              <!-- Text input-->
+              <div class="control-group">
+                <%= form_tag signup_path, class: 'form-signup', role: 'form'  do %>
+                    <br>
+                    <div class="controls">
+                      <!--<input id="Email" name="Email" class="form-control" type="text" placeholder="JoeSixpack@sixpacksrus.com" class="input-large" required="">-->
+                      <%= text_field_tag 'email', nil, class: 'form-control', type: 'text', placeholder: 'Email Address', class: 'input-large', :required => true %>
+                    </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= text_field_tag 'name', nil, class: 'form-control', placeholder: 'Name', class: 'input-large', :required => true, :autofocus => true %>
+                      </div>
+                    </div>
+                    <!-- Password input-->
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= password_field_tag 'password', nil, class: 'form-control', placeholder: 'Password', class: 'input-large', :required => true %>
+                        <!--<em>1-8 Characters</em>-->
+                      </div>
+                    </div>
+                    <!-- Text input-->
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= password_field_tag 'password_confirmation', nil, class: 'form-control', placeholder: 'Confirm Password', class: 'input-large', :required => true %>
+                      </div>
+                    </div>
+                    <!-- Multiple Radios (inline) -->
+                    <br>
+                    <div class="control-group">
+                      <br>
+                      <div class="controls">
+                        <%= submit_tag 'Sign Up', class: 'btn btn-lg btn-primary btn-block' %>
+
+                      </div>
+                    </div>
+                    </fieldset>
+                    <!--</form>-->
+                    </div>
+                    </div>
+                    </div>
+                <% end %>
+                <div class="modal-footer">
+                  <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </center>
+                </div>
+                </div>
+  </div>
+</div>
