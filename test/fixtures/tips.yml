@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: tips
+#
+#  id         :integer          not null, primary key
+#  problem    :string(255)
+#  error      :string(255)
+#  solution   :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  problem: MyString
+  error: MyString
+  solution: MyString
+
+two:
+  problem: MyString
+  error: MyString
+  solution: MyString

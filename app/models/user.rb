@@ -19,8 +19,7 @@
 
 class User < ActiveRecord::Base
 
-#  has_many :reservations
-#  belongs_to :campus
+  has_many :tips
 
   has_secure_password
 
