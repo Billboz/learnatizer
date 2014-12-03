@@ -1,8 +1,5 @@
 class SessionController < ApplicationController
-#  skip_before_action :authenticate, only: [:welcome, :signin, :signup]
-
-  def welcome
-  end
+  skip_before_action :authenticate, only: [:signin, :signup]
 
   def signup
     if request.post?
