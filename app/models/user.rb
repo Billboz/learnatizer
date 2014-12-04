@@ -20,10 +20,10 @@
 class User < ActiveRecord::Base
 
   has_many :tips
+  has_many :votes
 
   has_secure_password
 
-#  validates :name, :role, :campus_id, presence: true
   validates :password, length: { minimum: 6}
 
 

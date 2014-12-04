@@ -13,4 +13,5 @@
 class Tip < ActiveRecord::Base
   belongs_to :concept
   belongs_to :user
+  has_many :votes
 end
