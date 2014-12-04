@@ -14,4 +14,10 @@ class Tip < ActiveRecord::Base
   belongs_to :concept
   belongs_to :user
   has_many :votes
+
+  def total_score
+    votes.sum(:score)
+  end
+
+
 end

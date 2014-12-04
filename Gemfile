@@ -48,6 +48,7 @@ gem 'mini_magick' # For picture resizing
 gem 'fog' # For setting up part of Amazon S3
 gem 'bcrypt', '~> 3.1.9' # For password security
 gem 'activeadmin', github: 'activeadmin' # For an awesome admin console
+gem 'github-markdown'
 
 
 # User the 'thin' server instead of the default webrick

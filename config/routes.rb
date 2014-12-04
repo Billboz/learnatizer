@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root 'welcome#home'
 
+  resources :tips
+
   post 'signup', to: 'session#signup'
   post 'signin', to: 'session#signin'
   delete 'signout', to: 'session#signout'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
