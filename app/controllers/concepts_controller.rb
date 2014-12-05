@@ -1,8 +1,15 @@
 class ConceptsController < ApplicationController
   before_action :set_concept, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate, only: [ :home]
+
 
   # GET /concepts
   # GET /concepts.json
+
+  def home
+    @concepts = Concept.all
+  end
+
   def index
     @concepts = Concept.all
   end

@@ -1,0 +1,43 @@
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.thumb {
+    margin-bottom: 30px;
+}
+
+
+.thumb .thumbnail {
+    width: 250px;
+    height: 200px;
+    text-align: center;
+    padding-top: 45px;
+    color: #2B3E50;
+}
+
+footer {
+    margin: 50px 0;
+}
+
+.thumb .red {
+    background-color: #d9534f;
+}
+.thumb .purple {
+    background-color: #A26EDC;
+}
+.thumb .grey {
+    background-color: #4e5d6c;
+}
+.thumb .gold {
+    background-color: #df691a;
+}
+.thumb .green {
+    background-color: #5cb85c;
+}
+.thumb .lt-blue {
+    background-color: #5bc0de;
+}
+.thumb .lt-gold {
+    background-color: #f0ad4e;
+}
+

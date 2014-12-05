@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root 'welcome#home'
+  root 'concepts#home'
 
   resources :tips
+  resources :concepts
+  resources :votes
 
   post 'signup', to: 'session#signup'
   post 'signin', to: 'session#signin'

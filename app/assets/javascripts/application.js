@@ -15,6 +15,6 @@
 //= require turbolinks
 //= require_tree .
 // Every time a modal is shown, if it has an autofocus element, focus on it.
-//$('.modal').on('shown.myModal.modal', function() {
+//s$('.modal').on('shown.myModal.modal', function() {
 //    $(this).find('[autofocus]').focus();
 //});
