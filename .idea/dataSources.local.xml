@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="Rails learnatizer: development" uuid="0dd48eed-8688-4e17-ad33-ba1456f84ee3">
-      <first-sync>true</first-sync>
-    </data-source>
+    <data-source name="Rails learnatizer: development" uuid="0dd48eed-8688-4e17-ad33-ba1456f84ee3" />
   </component>
 </project>

@@ -17,7 +17,7 @@ class ConceptsController < ApplicationController
   # GET /concepts/1
   # GET /concepts/1.json
   def show
-
+    @concept.tips.all
   end
 
   # GET /concepts/new

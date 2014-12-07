@@ -40,6 +40,10 @@ gem 'spring',        group: :development
 
 ruby '2.0.0'
 
+# Bootstrap scss implementation
+gem 'bootstrap-sass', '~> 3.3.1'
+gem 'autoprefixer-rails'
+
 gem 'pry-rails'
 gem 'carrierwave' # For uploading files from the user
 gem 'dotenv-rails' # For managing ENV variables
