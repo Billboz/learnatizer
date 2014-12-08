@@ -1,5 +1,7 @@
 class TipsController < ApplicationController
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
+  before_action :set_concept, only: [:new, :show, :edit, :update, :destroy]
+
 
   # GET /tips
   # GET /tips.json
@@ -65,6 +67,10 @@ class TipsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_tip
       @tip = Tip.find(params[:id])
+    end
+
+    def set_concept
+      @concept = Concept.find(params[:concept_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

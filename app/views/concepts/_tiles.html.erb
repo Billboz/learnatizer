@@ -5,145 +5,15 @@
     <div class="col-lg-12">
       <h1 class="page-header"></h1>
     </div>
-
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-       <%= link_to concept_path(Concept.first), class: 'thumbnail lt-blue' do %>
-          <h1>scope</h1><% end %>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail red" href="#">
-        <h1>models</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail purple" href="#">
-        <h1>coffee script</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail grey" href="#">
-        <h1>gems</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail gold " href="#">
-        <h1>amazon S3</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail green" href="#">
-        <h1>github</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-blue" href="#">
-        <h1>heroku</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-gold" href="#">
-        <h1>forms</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail green" href="#">
-        <h1>controllers</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail gold" href="#">
-        <h1>routes</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail blue" href="#">
-        <h1>active record</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-gold" href="#">
-        <h1>testing</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-blue" href="#">
-        <h1>authorization</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail red" href="#">
-        <h1>oop</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail purple" href="#">
-        <h1>controllers</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail grey" href="#">
-        <h1>carrierwave</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail gold " href="#">
-        <h1>forms</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail red" href="#">
-        <h1>html</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-blue" href="#">
-        <h1>css</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-gold" href="#">
-        <h1>scaffolding</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-gold" href="#">
-        <h1>sql</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail lt-blue" href="#">
-        <h1>rails file structure</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail grey" href="#">
-        <h1>jquery</h1>
-      </a>
-    </div>
-    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-      <a class="thumbnail red" href="#">
-        <h1>authentication</h1>
-      </a>
-    </div>
-
+    <% @concepts.each_with_index do | conc, x | %>
+        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <%= link_to concept_path(conc), class: "thumbnail #{@tile_colors[x]}" do %>
+                <h1><%= conc.concept %></h1>
+            <% end %>
+        </div>
+    <% end %>
   </div>
-
-  <hr>
-
-  <!--&lt;!&ndash; Footer &ndash;&gt;-->
-  <!--<footer>-->
-    <!--<div class="row">-->
-      <!--<div class="col-lg-12">-->
-        <!--<p>Copyright &copy; Bill Bozarth 2014</p>-->
-      <!--</div>-->
-    <!--</div>-->
-  <!--</footer>-->
-
 </div>
-<!-- /.container -->
 
-<!-- jQuery
-<script src="js/jquery.js"></script> -->
 
-<!-- Bootstrap Core JavaScript
-<script src="js/bootstrap.min.js"></script> -->
+

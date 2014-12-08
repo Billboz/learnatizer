@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   root 'concepts#home'
 
-  resources :tips
-  resources :concepts
+  resources :concepts do
+    resources :tips
+  end
   resources :votes
 
   post 'signup', to: 'session#signup'

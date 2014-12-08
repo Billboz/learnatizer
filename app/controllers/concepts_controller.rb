@@ -7,6 +7,9 @@ class ConceptsController < ApplicationController
   # GET /concepts.json
 
   def home
+    @tile_colors = ['lt-blue', 'red', 'purple', 'grey', 'gold', 'green', 'lt-blue', 'lt-gold', 'green', 'gold', 'blue', 'lt-gold',
+                   'lt-blue', 'red', 'purple', 'grey', 'gold', 'red', 'lt-blue', 'lt-gold', 'gold', 'purple', 'grey', 'red']
+
     @concepts = Concept.all
   end
 
