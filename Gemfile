@@ -6,7 +6,7 @@ gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+ gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -44,6 +44,7 @@ ruby '2.0.0'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'autoprefixer-rails'
 
+
 gem 'pry-rails'
 gem 'carrierwave' # For uploading files from the user
 gem 'dotenv-rails' # For managing ENV variables
@@ -53,7 +54,14 @@ gem 'fog' # For setting up part of Amazon S3
 gem 'bcrypt', '~> 3.1.9' # For password security
 gem 'activeadmin', github: 'activeadmin' # For an awesome admin console
 gem 'github-markdown'
+gem 'therubyracer'
 
+
+# twitter bootstrap css & javascript toolkit
+gem 'twitter-bootswatch-rails', '~> 3.2.0'
+
+# twitter bootstrap helpers gem, e.g., alerts etc...
+gem 'twitter-bootswatch-rails-helpers'
 
 # User the 'thin' server instead of the default webrick
 gem 'thin'
