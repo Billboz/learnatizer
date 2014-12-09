@@ -5,6 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/superhero/bootstrap.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -16,7 +26,8 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <%= link_to 'learnatizer', root_path, class: 'navbar-brand' %>
+    <%= link_to 'learnatizer', root_path, class: 'navbarp' %>
+    <a class="navbar-brand" href="#">learnatizer</a>
   </div>
   <div class="navbar-collapse collapse navbar-responsive-collapse">
     <ul class="nav navbar-nav navbar-right">
@@ -29,7 +40,7 @@
             <% if signed_in? %>
                 <%= submit_tag current_user.name, class: 'btn btn-success dropdown-toggle', data: {toggle:  'dropdown'} %>
             <% else %>
-                <button class="btn btn-default" href="#signup" data-toggle="modal" style="float: right;" data-target=".bs-modal-sm">Sign In</button>
+                <button class="btn btn-default" href="#signup" data-toggle="modal" style="float: right;" data-target="#myModal">Sign In</button>
             <% end %>
 
             <ul class="dropdown-menu">
@@ -49,6 +60,28 @@
 
 <%= render 'layouts/flash_messages' %>
 
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myMod">
+  Launch demo modal
+</button>
 
+<!-- Modal -->
+<div class="modal fade" id="myMod" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

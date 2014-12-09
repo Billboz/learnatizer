@@ -31,7 +31,7 @@ class TipsController < ApplicationController
 
     respond_to do |format|
       if @tip.save
-        format.html { redirect_to concept_tip_path(@concept, @tip), notice: 'Tip was successfully created.' }
+        format.html { redirect_to concept_path(@concept) }
         format.json { render :show, status: :created, location: @tip }
       else
         format.html { render :new }

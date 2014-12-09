@@ -10,11 +10,31 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require_tree .
+ *= require_self
  */
+
+
+
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "concept";
+
+
+//@import "bootstrap-sprockets";
+//@import "bootstrap";
+//@import "concept";
+//// Example using 'Cerulean' bootswatch
+////
+//// First import cerulean variables
+//@import "bootswatch/superhero/variables";
+//
+//// Then bootstrap itself
+//@import "bootstrap";
+//
+//// Bootstrap body padding for fixed navbar
+//body { padding-top: 0px; }
+//
+//// And finally bootswatch style itself
+//@import "bootswatch/superhero/bootswatch";
 
 
 //@import "superhero/_variables";

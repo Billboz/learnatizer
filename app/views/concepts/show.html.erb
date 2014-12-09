@@ -2,12 +2,17 @@
   <p id="notice"><%= notice %></p>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-lg-10 col-md-8">
     <ul class="list-unstyled">
       <% @concept.tips.each do | tip | %>
-          <li><%= tip.problem %></li>
-          <li><%= tip.solution %></li>
-          <li><%= tip.error %></li>
+          <center><div class="panel-heading"><%= @concept.concept  %></div></center>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <li><%= tip.problem %></li>
+              <li><%= tip.solution %></li>
+              <li><%= tip.error %></li>
+            </div>
+          </div>
       <% end %>
     </ul>
   </div>

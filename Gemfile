@@ -41,8 +41,9 @@ gem 'spring',        group: :development
 ruby '2.0.0'
 
 # Bootstrap scss implementation
-gem 'bootstrap-sass', '~> 3.3.1'
-gem 'autoprefixer-rails'
+# gem 'bootstrap-sass', '~> 3.3.1'
+# gem 'autoprefixer-rails'
+# gem 'bootswatch-rails'
 
 
 gem 'pry-rails'
@@ -57,11 +58,6 @@ gem 'github-markdown'
 gem 'therubyracer'
 
 
-# twitter bootstrap css & javascript toolkit
-gem 'twitter-bootswatch-rails', '~> 3.2.0'
-
-# twitter bootstrap helpers gem, e.g., alerts etc...
-gem 'twitter-bootswatch-rails-helpers'
 
 # User the 'thin' server instead of the default webrick
 gem 'thin'
