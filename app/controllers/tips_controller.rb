@@ -1,7 +1,6 @@
 class TipsController < ApplicationController
   before_action :set_tip, only: [:show, :edit, :update, :destroy]
-  before_action :set_concept, only: [:new, :show, :edit, :update, :destroy]
-
+  before_action :set_concept, only: [:index, :new, :show, :create, :edit, :update, :destroy]
 
   # GET /tips
   # GET /tips.json
@@ -27,10 +26,12 @@ class TipsController < ApplicationController
   # POST /tips.json
   def create
     @tip = Tip.new(tip_params)
+    @tip.concept = @concept
+    @tip.user = @current_user
 
     respond_to do |format|
       if @tip.save
-        format.html { redirect_to @tip, notice: 'Tip was successfully created.' }
+        format.html { redirect_to concept_tip_path(@concept, @tip), notice: 'Tip was successfully created.' }
         format.json { render :show, status: :created, location: @tip }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class TipsController < ApplicationController
   def update
     respond_to do |format|
       if @tip.update(tip_params)
-        format.html { redirect_to @tip, notice: 'Tip was successfully updated.' }
+        format.html { redirect_to concept_tip_path(@concept, @tip), notice: 'Tip was successfully updated.' }
         format.json { render :show, status: :ok, location: @tip }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class TipsController < ApplicationController
   def destroy
     @tip.destroy
     respond_to do |format|
-      format.html { redirect_to tips_url, notice: 'Tip was successfully destroyed.' }
+      format.html { redirect_to concept_tip_url(@concept, @tip), notice: 'Tip was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -75,6 +76,6 @@ class TipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tip_params
-      params[:tip]
+      params.require(:tip).permit(:error, :problem, :solution )
     end
 end
