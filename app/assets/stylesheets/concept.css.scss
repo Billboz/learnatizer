@@ -1,3 +1,25 @@
+body {
+  background:#c33;
+}
+
+.panel-transparent {
+  background: none;
+  opacity: 0.5;
+}
+
+.panel-transparent .panel-heading{
+  background: rgba(35, 47, 64, 0.8)!important;
+}
+
+.panel-transparent .panel-body{
+  background: rgba(35, 47, 64, 0.8)!important;
+}
+
+.body-text{
+  color: rgba(255, 255, 255, 1.0);
+  opacity: 1.0;
+}
+
 #jumbotron-image {
     background-image: url("IronYard.jpg");
     -webkit-background-size: 100% 100%;
