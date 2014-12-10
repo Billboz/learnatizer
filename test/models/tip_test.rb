@@ -10,6 +10,7 @@
 #  updated_at :datetime
 #  concept_id :integer
 #  user_id    :integer
+#  title      :string(255)
 #
 
 require 'test_helper'

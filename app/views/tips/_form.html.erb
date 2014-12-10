@@ -4,17 +4,21 @@
       <div class="form-group">
         <label for="textArea" class="col-lg-2 control-label"></label>
         <div class="col-lg-10">
-          <%= f.text_area 'problem', class: 'form-control', rows: '3', placeholder: 'problem'  %>
-          <!--<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>-->
+          <%= f.text_area 'title', class: 'form-control', rows: '1', placeholder: 'title'  %>
 <br><br>
         </div>
       </div>
-
+      <div class="form-group">
+        <label for="textArea" class="col-lg-2 control-label"></label>
+        <div class="col-lg-10">
+          <%= f.text_area 'problem', class: 'form-control', rows: '3', placeholder: 'problem'  %>
+<br><br>
+        </div>
+      </div>
       <div class="form-group">
         <label for="textArea" class="col-lg-2 control-label"></label>
         <div class="col-lg-10">
           <%= f.text_area 'error', class: 'form-control', rows: '3', placeholder: 'error'  %>
-          <!--<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>-->
 <br><br>
         </div>
       </div>
@@ -22,7 +26,6 @@
         <label for="textArea" class="col-lg-2 control-label"></label>
         <div class="col-lg-10">
           <%= f.text_area 'solution', class: 'form-control', rows: '3', placeholder: 'solution'  %>
-          <!--<span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>-->
 <br><br>
         </div>
       </div>
