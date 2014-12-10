@@ -1,27 +1,31 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
-
-<div class="row">
-  <div class="col-lg-10 col-md-8">
-    <ul class="list-unstyled">
-      <% @concept.tips.each do | tip | %>
-          <center><div class="panel-heading"><%= @concept.concept  %></div></center>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <li><%= tip.problem %></li>
-              <li><%= tip.solution %></li>
-              <li><%= tip.error %></li>
-            </div>
-          </div>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-
-
 
 
 <%= link_to 'new tip', new_concept_tip_path(@concept), class: 'btn btn-primary btn-lg'%><br>
 
+<div class="container-fluid">
+
+  <h1><center><div class="heading"><%= @concept.concept  %></div></center></h1>
+
+  <div class="col-md-10 col-md-offset-2">
+
+  <% @concept.tips.each do | tip | %>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#problem-<%= tip.id %>" data-toggle="tab">problem</a></li>
+    <li><a href="#error-<%= tip.id %>" data-toggle="tab">error</a></li>
+    <li><a href="#solution-<%= tip.id %>" data-toggle="tab">solution</a></li>
+  </ul>
+  <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="problem-<%= tip.id %>">
+      <p><%= tip.problem %></p>
+    </div>
+    <div class="tab-pane fade" id="error-<%= tip.id %>">
+      <p><%= tip.error %></p>
+    </div>
+    <div class="tab-pane fade" id="solution-<%= tip.id %>">
+      <p><%= tip.solution %></p>
+    </div>
+  </div>
+      <br>
+  <% end %>
+  </div>
 </div>

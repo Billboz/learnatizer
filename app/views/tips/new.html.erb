@@ -1,6 +1,9 @@
-<h1>new tip</h1>
+<%= link_to 'back', concept_path(@concept), class: 'btn btn-primary btn-lg' %>
 
+<div class="container-fluid">
+<h1><center><div class="heading">new tip for <%= @concept.concept %></div></center></h1>
+<div class="col-md-10 col-md-offset--1">
 <%= render 'form' %>
-
-<%= link_to 'back', concept_path(@concept), class: 'btn btn-primary btn-md' %>
+</div>
+</div>
 
