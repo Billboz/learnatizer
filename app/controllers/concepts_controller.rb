@@ -20,7 +20,12 @@ class ConceptsController < ApplicationController
   # GET /concepts/1
   # GET /concepts/1.json
   def show
-    @concept.tips.all
+    @tips = @concept.tips.order('created_at DESC')
+    # @concept = Tip.where('concept_id = ?', 193).order('created_at desc')
+    # @concept.tips = @concept.tips.group_by { |t| t.posted_at. }
+    #
+    #
+    # @concept.tips.all
   end
 
   # GET /concepts/new

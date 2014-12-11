@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="col-md-10 col-md-offset-2">
-  <% @concept.tips.each do | tip | %>
+  <% @tips.each do | tip | %>
         <div class="tab-pane fade active in">
           <h2><%= tip.title %></h2>
         </div>
@@ -21,7 +21,7 @@
     <li class="active"><a href="#problem-<%= tip.id %>" data-toggle="tab">problem</a></li>
     <li><a href="#error-<%= tip.id %>" data-toggle="tab">error</a></li>
     <li><a href="#solution-<%= tip.id %>" data-toggle="tab">solution</a></li>
-    <li><a href="#user-<%= tip.id %>" data-toggle="tab"><h4>. . . created by <%= tip.user.name %></h4></a></li>
+    <li><a href="#user-<%= tip.id %>" data-toggle="tab">   ==>    ==>    ==> =>=>=> created by <%= tip.user.name %>!</a></li>
 
   </ul>
   <div id="myTabContent" class="tab-content">
