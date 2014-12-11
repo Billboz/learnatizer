@@ -1,19 +1,16 @@
+#form-body {
+  padding-top: 90px;
+}
+
 body {
   background:#c33;
 }
 
 .panel-transparent {
   background: none;
-  opacity: 0.5;
+  background-color: rgba(35, 47, 64, 0.5)!important;
 }
 
-.panel-transparent .panel-heading{
-  background: rgba(35, 47, 64, 0.9)!important;
-}
-
-.panel-transparent .panel-body{
-  background: rgba(35, 47, 64, 0.9)!important;
-}
 
 .body-text{
   color: rgba(255, 255, 255, 1.0);
@@ -47,32 +44,93 @@ body {
     height: 200px;
     text-align: center;
     padding-top: 45px;
-    color: #2B3E50;
+    color: #FFFFFF;
 }
 
 footer {
     margin: 50px 0;
 }
 
-.thumb .red {
-    background-color: #d9534f;
-}
-.thumb .purple {
-    background-color: #A26EDC;
-}
-.thumb .grey {
-    background-color: #4e5d6c;
-}
-.thumb .gold {
-    background-color: #df691a;
-}
-.thumb .green {
-    background-color: #5cb85c;
-}
-.thumb .lt-blue {
-    background-color: #5bc0de;
-}
-.thumb .lt-gold {
-    background-color: #f0ad4e;
+.concept_title  {
+  width: 750px;
+  height: 100px;
+  text-align: center;
+  padding-top: 4px;
 }
 
+#myTabContent {
+  margin-bottom: 150px;
+}
+
+.thumb.scope {
+  background-color: #d9534f;
+}
+.thumb.model {
+  background-color: #A26EDC;
+}
+.thumb.coffeescript {
+  background-color: #4e5d6c;
+}
+.thumb.gems {
+  background-color: #df691a;
+}
+.thumb.ruby {
+  background-color: #5bc0de;
+}
+.thumb.amazon-S3 {
+  background-color: #f0ad4e;
+}
+.thumb.github {
+  background-color: #d9534f;
+}
+.thumb.heroku {
+  background-color: #A26EDC;
+}
+.thumb.forms {
+  background-color: #4e5d6c;
+}
+.thumb.controllers {
+  background-color: #df691a;
+}
+.thumb.active-record {
+  background-color: #5cb85c;
+}
+.thumb.testing {
+  background-color: #5bc0de;
+}
+.thumb.oop {
+  background-color: #f0ad4e;
+}
+.thumb.recources {
+  background-color: #d9534f;
+}
+.thumb.carrierwave {
+  background-color: #A26EDC;
+}
+.thumb.html {
+  background-color: #4e5d6c;
+}
+.thumb.css {
+  background-color: #df691a;
+}
+.thumb.scaffolding {
+  background-color: #5cb85c;
+}
+.thumb.sql {
+  background-color: #5bc0de;
+}
+.thumb.rails-file-structure {
+  background-color: #f0ad4e;
+}
+.thumb.jquery {
+  background-color: #d9534f;
+}
+.thumb.views {
+  background-color: #A26EDC;
+}
+.thumb.authentication {
+  background-color: #4e5d6c;
+}
+.thumb.authorization {
+  background-color: #df691a;
+}

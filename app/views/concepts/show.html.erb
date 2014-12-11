@@ -2,12 +2,16 @@
 
 <%= link_to 'new tip', new_concept_tip_path(@concept), class: 'btn btn-primary btn-lg'%><br>
 
+
 <div class="container-fluid">
-
-  <h1><center><div class="heading"><%= @concept.concept  %></div></center></h1>
-
+  <div class="row-fluid">
+    <div class="col-md-4 col-md-10 col-md-offset-3">
+        <div class="concept_title thumb <%= @concept.concept %>">
+            <h1><center><div class=""><%= @concept.concept %></div></center></h1>
+          </div>
+    </div>
+  </div>
   <div class="col-md-10 col-md-offset-2">
-
   <% @concept.tips.each do | tip | %>
         <div class="tab-pane fade active in" id="problem-<%= tip.id %>">
           <h3><%= tip.title %></h3>
@@ -30,7 +34,6 @@
       <p><%= raw GitHub::Markdown.render(tip.solution).html_safe %></p>
     </div>
   </div>
-      <br>
   <% end %>
   </div>
 </div>
