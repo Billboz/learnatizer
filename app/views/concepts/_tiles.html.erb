@@ -7,7 +7,7 @@
     </div>
     <% @concepts.each_with_index do | conc, x | %>
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <%= link_to concept_path(conc), class: "thumbnail thumb #{conc.concept.gsub(/ /,'-')}" do %>
+            <%= link_to concept_path(conc), class: "thumbnail thumb #{conc.concept.gsub(/\s/,'-')}" do %>
                 <h1><%= conc.concept %></h1>
             <% end %>
         </div>
