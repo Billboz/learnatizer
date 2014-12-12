@@ -21,7 +21,7 @@
     <li class="active"><a href="#problem-<%= tip.id %>" data-toggle="tab">problem</a></li>
     <li><a href="#error-<%= tip.id %>" data-toggle="tab">error</a></li>
     <li><a href="#solution-<%= tip.id %>" data-toggle="tab">solution</a></li>
-    <li><a href="#user-<%= tip.id %>" data-toggle="tab">   ==>    ==>    ==> =>=>=> created by <%= tip.user.name %>!</a></li>
+    <li class="created-by">created by <%= tip.user.name %>!</li>
 
   </ul>
   <div id="myTabContent" class="tab-content">
