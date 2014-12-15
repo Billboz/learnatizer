@@ -22,5 +22,7 @@ class Tip < ActiveRecord::Base
     votes.sum(:score)
   end
 
+  mount_uploader :attachment, AttachmentUploader
+
 
 end
